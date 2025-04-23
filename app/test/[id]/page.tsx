@@ -104,10 +104,10 @@ export default function TestPage() {
     });
     
     // Cálculo de puntuación según reglas:
-    // Primer tipo: 1 punto por acierto, -3 por fallo
-    // Segundo tipo: 4 puntos por acierto, -3 por fallo
-    const puntosNormales = aciertosNormales - (fallosNormales * 3);
-    const puntosPracticos = (aciertosPracticos * 4) - (fallosPracticos * 3);
+    // Primer tipo: 1 punto por acierto, -1/3 del valor de la pregunta por fallo
+    // Segundo tipo: 4 puntos por acierto, -4/3 del valor de la pregunta por fallo
+    const puntosNormales = aciertosNormales - (fallosNormales * (1/3));
+    const puntosPracticos = (aciertosPracticos * 4) - (fallosPracticos * (4/3));
     const puntuacionTotal = puntosNormales + puntosPracticos;
     
     // Porcentaje sobre 191 puntos (79 de la parte 1 + 112 de la parte 2)

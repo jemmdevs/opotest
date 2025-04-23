@@ -48,7 +48,7 @@ export default function ResultadoTest({ resultado, onReintentar }: ResultadoTest
             </div>
             <div className="flex justify-between pt-2 border-t border-gray-200 dark:border-gray-700">
               <span>Total de puntos:</span>
-              <span className="font-medium">{resultado.aciertosNormales - (resultado.fallosNormales * 3)}</span>
+              <span className="font-medium">{resultado.aciertosNormales - (resultado.fallosNormales * (1/3))}</span>
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function ResultadoTest({ resultado, onReintentar }: ResultadoTest
             </div>
             <div className="flex justify-between pt-2 border-t border-gray-200 dark:border-gray-700">
               <span>Total de puntos:</span>
-              <span className="font-medium">{(resultado.aciertosPracticos * 4) - (resultado.fallosPracticos * 3)}</span>
+              <span className="font-medium">{(resultado.aciertosPracticos * 4) - (resultado.fallosPracticos * (4/3))}</span>
             </div>
           </div>
         </div>
